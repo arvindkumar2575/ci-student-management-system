@@ -24,7 +24,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://localhost:8080/ci-practice/';
+    public $baseURL = 'http://localhost:8080/ci-student-management-system/';
 
     /**
      * --------------------------------------------------------------------------
