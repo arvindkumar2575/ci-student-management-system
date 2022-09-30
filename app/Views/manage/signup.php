@@ -22,7 +22,7 @@
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password">
     
-    <input type="hidden" id="inputSignup" name="form-type" value="signup" />
+    <input type="hidden" name="form-type" value="signup" />
     <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
     <div class="other-pages">
       <a href="<?= base_url('manage') ?>">Login</a>

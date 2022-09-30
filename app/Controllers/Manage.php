@@ -14,27 +14,29 @@ class Manage extends BaseController
     public function __construct()
     {
         $this->session = session();
-        $this->common = new Common();
-        $this->userModel = new UserModel();
     }
     public function login()
     {
-        return view('manage/login');
+        $data = array();
+        $data['title'] = 'Log In';
+        $data["form_type"] = "login";
+        return view('manage/login',$data);
     }
 
     public function signup()
     {
-        return view('manage/signup');
+        $data = array();
+        $data['title'] = 'Sign Up';
+        $data["form_type"] = "signup";
+        return view('manage/signup',$data);
     }
 
     public function forget_password()
     {
-        return view('manage/forget-password');
-    }
-
-    public function checkString(string $p1, string $p2)
-    {
-        return $p1==$p2;
+        $data = array();
+        $data['title'] = 'Forget Password';
+        $data["form_type"] = "forget-password";
+        return view('manage/forget-password',$data);
     }
 
     public function dashboard()

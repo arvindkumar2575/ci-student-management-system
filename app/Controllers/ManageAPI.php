@@ -27,19 +27,19 @@ class ManageAPI extends BaseController
             $password = $this->request->getVar('password');
             
             $data = $this->common->get_single_row("users","email",$email);
+            // echo "<pre>";print_r($data);die();
             if($data){
                 $pass = $data['password'];
-                // $hashPass = password_hash($pass,PASSWORD_BCRYPT);
-                // $authenticatePass = password_verify($password,$hashPass);
-                if(strcmp($password,$pass)==0){
-                    $session_data = [
-                        'id'=>$data['id'],
-                        'first_name'=>$data['first_name'],
-                        'last_name'=>$data['last_name'],
-                        'email'=>$data['email'],
-                        'isLoggedIn'=>true
-                    ];
-                    $this->session->set($session_data);
+                $authenticatePass = password_verify($password,$pass);
+                if($authenticatePass){
+                    // $session_data = [
+                    //     'id'=>$data['id'],
+                    //     'first_name'=>$data['first_name'],
+                    //     'last_name'=>$data['last_name'],
+                    //     'email'=>$data['email'],
+                    //     'isLoggedIn'=>true
+                    // ];
+                    // $this->session->set('userdata',$session_data);
                     $result = array('status'=>true,'message'=>'Successfully Logged In!');
                     return json_encode($result);
                 }else{
@@ -55,8 +55,24 @@ class ManageAPI extends BaseController
             // echo $form_type;die();
             $first_name = $this->request->getVar('first_name');
             $last_name = $this->request->getVar('last_name');
-            $email = $this->request->getVar('username');
+            $email = $this->request->getVar('email');
             $password = $this->request->getVar('password');
+            $hashPass = password_hash($password,PASSWORD_BCRYPT);
+
+            $data = array(
+                'first_name'=>$first_name,
+                'last_name'=>$last_name,
+                'email'=>$email,
+                'password'=>$hashPass
+            );
+            $res = $this->common->data_insert('users',$data);
+            if($res){
+                $result = array('status'=>true,'message'=>'Successfully Register!','id'=>$res);
+                return json_encode($result);
+            }else{
+                $result = array('status'=>false,'message'=>'Please try again!');
+                return json_encode($result);
+            }
         }else{
             $result = array('status'=>false,'message'=>'Invalid request!');
             return json_encode($result);

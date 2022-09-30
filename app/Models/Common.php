@@ -10,11 +10,13 @@ class Common extends Model
 
     public function data_insert($table=null, array $data=null)
     {
+        $query=false;
         if(isset($table)){
             $query = $this->db->table($table)->insert($data);
-            return $query;
+            $id = $this->db->insertID();
+            return $id;
         }else{
-            return false;
+            return $query;
         }
         
     }
@@ -32,9 +34,9 @@ class Common extends Model
     {
         $result=null;
         if(isset($table)){
-            $query = $this->db->query("SELECT * FROM $table WHERE $key='$value'");
-            // echo $this->db->lastQuery;
+            $query = $this->db->table($table)->where($key,$value)->get();
             $result = $query->getRowArray();
+            // echo $this->db->lastQuery;
         }
         return $result;
     }

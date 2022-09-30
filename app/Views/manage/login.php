@@ -1,5 +1,6 @@
 <?= view('manage/layouts/login/header') ?>
 
+
 <div class="form-div text-center">
 
   <form class="form-signin" id="form-login" method="GET" action="<?= current_url() ?>">
@@ -15,7 +16,7 @@
         <input type="checkbox" id="inputRemember" name="remember"> Remember me
       </label>
     </div>
-    <input type="hidden" id="inputLogin" name="form-type" value="login" />
+    <input type="hidden" name="form-type" value="login" />
     <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
     <div class="other-pages">
       <a href="<?= base_url('manage/signup')?>">Sign Up</a>

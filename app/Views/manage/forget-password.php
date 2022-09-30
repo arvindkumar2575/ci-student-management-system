@@ -13,6 +13,7 @@
     <label for="inputEmail" class="sr-only">Email address</label>
     <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" autofocus>
 
+    <input type="hidden" name="form-type" value="forget-password" />
     <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
     <div class="other-pages">
       <a href="<?= base_url('manage')?>">Login</a>

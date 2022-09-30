@@ -37,3 +37,121 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
  9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
 10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-30 13:14:59 --> Object of class CodeIgniter\Session\Session could not be converted to string
+in APPPATH\Views\manage\login.php on line 7.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('manage/login', [], true)
+ 4 APPPATH\Controllers\Manage.php(23): view('manage/login', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->login()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-30 13:19:50 --> Cannot use object of type CodeIgniter\Session\Session as array
+in APPPATH\Views\manage\login.php on line 7.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('manage/login', [], true)
+ 4 APPPATH\Controllers\Manage.php(23): view('manage/login', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->login()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-30 13:25:14 --> Cannot use object of type CodeIgniter\Session\Session as array
+in APPPATH\Views\manage\login.php on line 8.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('manage/login', [], true)
+ 4 APPPATH\Controllers\Manage.php(23): view('manage/login', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->login()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-30 13:25:59 --> Object of type CodeIgniter\Session\Session is not callable
+in APPPATH\Views\manage\login.php on line 8.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('manage/login', [], true)
+ 4 APPPATH\Controllers\Manage.php(23): view('manage/login', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->login()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-30 13:55:41 --> mysqli_sql_exception: Column 'email' cannot be null in C:\xampp\htdocs\ci-student-management-system\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ci-student-management-system\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\ci-student-management-system\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\ci-student-management-system\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\ci-student-management-system\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\ci-student-management-system\app\Models\Common.php(14): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ci-student-management-system\app\Controllers\ManageAPI.php(69): App\Models\Common->data_insert('users', Array)
+#6 C:\xampp\htdocs\ci-student-management-system\system\CodeIgniter.php(904): App\Controllers\ManageAPI->loginAuth()
+#7 C:\xampp\htdocs\ci-student-management-system\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageAPI))
+#8 C:\xampp\htdocs\ci-student-management-system\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci-student-management-system\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-09-30 13:56:37 --> mysqli_sql_exception: Column 'email' cannot be null in C:\xampp\htdocs\ci-student-management-system\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ci-student-management-system\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\ci-student-management-system\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\ci-student-management-system\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\ci-student-management-system\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\ci-student-management-system\app\Models\Common.php(14): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ci-student-management-system\app\Controllers\ManageAPI.php(69): App\Models\Common->data_insert('users', Array)
+#6 C:\xampp\htdocs\ci-student-management-system\system\CodeIgniter.php(904): App\Controllers\ManageAPI->loginAuth()
+#7 C:\xampp\htdocs\ci-student-management-system\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageAPI))
+#8 C:\xampp\htdocs\ci-student-management-system\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci-student-management-system\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-09-30 13:56:46 --> mysqli_sql_exception: Column 'email' cannot be null in C:\xampp\htdocs\ci-student-management-system\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ci-student-management-system\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\ci-student-management-system\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\ci-student-management-system\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\ci-student-management-system\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\ci-student-management-system\app\Models\Common.php(14): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ci-student-management-system\app\Controllers\ManageAPI.php(69): App\Models\Common->data_insert('users', Array)
+#6 C:\xampp\htdocs\ci-student-management-system\system\CodeIgniter.php(904): App\Controllers\ManageAPI->loginAuth()
+#7 C:\xampp\htdocs\ci-student-management-system\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageAPI))
+#8 C:\xampp\htdocs\ci-student-management-system\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci-student-management-system\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-09-30 13:56:59 --> mysqli_sql_exception: Column 'email' cannot be null in C:\xampp\htdocs\ci-student-management-system\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ci-student-management-system\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\ci-student-management-system\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\ci-student-management-system\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\ci-student-management-system\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\ci-student-management-system\app\Models\Common.php(14): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ci-student-management-system\app\Controllers\ManageAPI.php(69): App\Models\Common->data_insert('users', Array)
+#6 C:\xampp\htdocs\ci-student-management-system\system\CodeIgniter.php(904): App\Controllers\ManageAPI->loginAuth()
+#7 C:\xampp\htdocs\ci-student-management-system\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageAPI))
+#8 C:\xampp\htdocs\ci-student-management-system\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci-student-management-system\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-09-30 13:57:33 --> mysqli_sql_exception: Column 'email' cannot be null in C:\xampp\htdocs\ci-student-management-system\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ci-student-management-system\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\ci-student-management-system\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\ci-student-management-system\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\ci-student-management-system\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\ci-student-management-system\app\Models\Common.php(14): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ci-student-management-system\app\Controllers\ManageAPI.php(69): App\Models\Common->data_insert('users', Array)
+#6 C:\xampp\htdocs\ci-student-management-system\system\CodeIgniter.php(904): App\Controllers\ManageAPI->loginAuth()
+#7 C:\xampp\htdocs\ci-student-management-system\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageAPI))
+#8 C:\xampp\htdocs\ci-student-management-system\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci-student-management-system\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-09-30 13:59:36 --> mysqli_sql_exception: Column 'email' cannot be null in C:\xampp\htdocs\ci-student-management-system\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\ci-student-management-system\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\ci-student-management-system\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\ci-student-management-system\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\ci-student-management-system\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\ci-student-management-system\app\Models\Common.php(15): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\ci-student-management-system\app\Controllers\ManageAPI.php(70): App\Models\Common->data_insert('users', Array)
+#6 C:\xampp\htdocs\ci-student-management-system\system\CodeIgniter.php(904): App\Controllers\ManageAPI->loginAuth()
+#7 C:\xampp\htdocs\ci-student-management-system\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ManageAPI))
+#8 C:\xampp\htdocs\ci-student-management-system\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\ci-student-management-system\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 {main}

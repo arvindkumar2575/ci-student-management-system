@@ -1,4 +1,5 @@
-<script>
+  <script>
+    let manageURL = "<?= manageURL()?>"
     let manageURL_API = "<?= manageURL_API()?>"
   </script>
   <script src="<?= base_url() ?>/assets/manage/js/scripts/jquery.min.js"></script>

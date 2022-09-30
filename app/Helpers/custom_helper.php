@@ -1,5 +1,5 @@
 <?php
-// Function: used to convert a string to revese in order
+
 if (!function_exists("manageURL")) {
     function manageURL()
     {

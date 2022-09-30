@@ -8,7 +8,7 @@
   <meta name="author" content="">
   <link rel="icon" href="<?= base_url() ?>/assets/manage/images/favicons/favicon.ico">
 
-  <title>WebManage | Log In</title>
+  <title>WebManage<?= (isset($title) || empty($title))?' | '.$title:'' ?></title>
 
   <link rel="canonical" href="">
 
