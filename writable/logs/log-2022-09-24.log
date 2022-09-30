@@ -1,0 +1,295 @@
+CRITICAL - 2022-09-24 02:14:38 --> password_hash(): Argument #2 ($algo) must be a valid password hashing algorithm
+in APPPATH\Controllers\Manage.php on line 32.
+ 1 APPPATH\Controllers\Manage.php(32): password_hash('arvind', 'arvind')
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->loginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 02:14:59 --> password_hash(): Argument #2 ($algo) must be a valid password hashing algorithm
+in APPPATH\Controllers\Manage.php on line 32.
+ 1 APPPATH\Controllers\Manage.php(32): password_hash('arvind', 'arvind')
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->loginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 02:16:49 --> password_hash(): Argument #2 ($algo) must be a valid password hashing algorithm
+in APPPATH\Controllers\Manage.php on line 32.
+ 1 APPPATH\Controllers\Manage.php(32): password_hash('arvind', 'C:\\xampp\\htdocs\\ci-practice')
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->loginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 02:18:27 --> Undefined variable $$2y$10$bWp751eaf.H1Ba4vQRKmE.nAufxnbv2ZZwtwwn9PmvAlluBPzVQuS
+in APPPATH\Controllers\Manage.php on line 42.
+ 1 APPPATH\Controllers\Manage.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $$2y$10$bWp751eaf.H1Ba4vQRKmE.nAufxnbv2ZZwtwwn9PmvAlluBPzVQuS', 'APPPATH\\Controllers\\Manage.php', 42)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->loginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 02:23:55 --> password_hash(): Argument #2 ($algo) must be a valid password hashing algorithm
+in APPPATH\Controllers\Manage.php on line 32.
+ 1 APPPATH\Controllers\Manage.php(32): password_hash('arvind', '45')
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->loginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 04:16:59 --> Undefined array key "userdata"
+in APPPATH\Views\manage\index.php on line 29.
+ 1 APPPATH\Views\manage\index.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "userdata"', 'APPPATH\\Views\\manage\\index.php', 29)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\manage\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('manage/index', [], true)
+ 5 APPPATH\Controllers\Manage.php(15): view('manage/index')
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 04:17:21 --> Undefined array key "userdata"
+in APPPATH\Views\manage\index.php on line 29.
+ 1 APPPATH\Views\manage\index.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "userdata"', 'APPPATH\\Views\\manage\\index.php', 29)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\manage\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('manage/index', [], true)
+ 5 APPPATH\Controllers\Manage.php(15): view('manage/index')
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 04:21:55 --> Undefined variable $session
+in APPPATH\Views\manage\index.php on line 26.
+ 1 APPPATH\Views\manage\index.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $session', 'APPPATH\\Views\\manage\\index.php', 26)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\manage\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('manage/index', [], true)
+ 5 APPPATH\Controllers\Manage.php(15): view('manage/index')
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 04:37:36 --> Call to undefined method CodeIgniter\Session\Session::unset()
+in APPPATH\Controllers\Manage.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->loginAuth()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 04:37:40 --> Call to undefined method CodeIgniter\Session\Session::unset()
+in APPPATH\Controllers\Manage.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->loginAuth()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 04:37:42 --> Call to undefined method CodeIgniter\Session\Session::unset()
+in APPPATH\Controllers\Manage.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->loginAuth()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 04:38:03 --> Call to undefined method CodeIgniter\Session\Session::unset()
+in APPPATH\Controllers\Manage.php on line 40.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->loginAuth()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 04:39:24 --> Illegal offset type in unset
+in SYSTEMPATH\Session\Session.php on line 556.
+ 1 APPPATH\Controllers\Manage.php(40): CodeIgniter\Session\Session->remove([...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->loginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 04:41:50 --> Undefined global variable $_SESSION
+in APPPATH\Views\manage\dashboard\index.php on line 24.
+ 1 APPPATH\Views\manage\dashboard\index.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'APPPATH\\Views\\manage\\dashboard\\index.php', 24)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\manage\\dashboard\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('manage/dashboard/index', [], true)
+ 5 APPPATH\Controllers\Manage.php(61): view('manage/dashboard/index')
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 05:27:21 --> Invalid file: manage/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('manage/index.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('manage/index', [], true)
+ 3 APPPATH\Controllers\Manage.php(15): view('manage/index')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 05:27:57 --> Invalid file: manage/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('manage/index.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('manage/index', [], true)
+ 3 APPPATH\Controllers\Manage.php(15): view('manage/index')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 05:28:20 --> Invalid file: manage/index.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('manage/index.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('manage/index', [], true)
+ 3 APPPATH\Controllers\Manage.php(15): view('manage/index')
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 06:00:01 --> Undefined global variable $_SESSION
+in APPPATH\Controllers\Manage.php on line 11.
+ 1 APPPATH\Controllers\Manage.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'APPPATH\\Controllers\\Manage.php', 11)
+ 2 SYSTEMPATH\CodeIgniter.php(866): App\Controllers\Manage->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 06:01:14 --> Call to undefined method CodeIgniter\Session\Session::unset()
+in APPPATH\Controllers\Manage.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->loginAuth()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 06:28:07 --> Undefined array key "id"
+in APPPATH\Controllers\Manage.php on line 15.
+ 1 APPPATH\Controllers\Manage.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'APPPATH\\Controllers\\Manage.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->login()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 06:28:18 --> Undefined array key "userdata"
+in APPPATH\Controllers\Manage.php on line 15.
+ 1 APPPATH\Controllers\Manage.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "userdata"', 'APPPATH\\Controllers\\Manage.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->login()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 06:28:26 --> Array to string conversion
+in APPPATH\Controllers\Manage.php on line 15.
+ 1 APPPATH\Controllers\Manage.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Manage.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->login()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 06:30:54 --> Undefined global variable $_SESSION
+in APPPATH\Controllers\Manage.php on line 14.
+ 1 APPPATH\Controllers\Manage.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'APPPATH\\Controllers\\Manage.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->login()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 06:30:58 --> Undefined global variable $_SESSION
+in APPPATH\Controllers\Manage.php on line 14.
+ 1 APPPATH\Controllers\Manage.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'APPPATH\\Controllers\\Manage.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->login()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 06:31:09 --> Undefined global variable $_SESSION
+in APPPATH\Controllers\Manage.php on line 14.
+ 1 APPPATH\Controllers\Manage.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'APPPATH\\Controllers\\Manage.php', 14)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->login()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 06:31:50 --> Undefined global variable $_SESSION
+in APPPATH\Controllers\Manage.php on line 15.
+ 1 APPPATH\Controllers\Manage.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined global variable $_SESSION', 'APPPATH\\Controllers\\Manage.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->login()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 07:48:22 --> Undefined property: App\Controllers\Manage::$output
+in APPPATH\Controllers\Manage.php on line 12.
+ 1 APPPATH\Controllers\Manage.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Manage::$output', 'APPPATH\\Controllers\\Manage.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(866): App\Controllers\Manage->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(448): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 07:48:42 --> Undefined property: App\Controllers\Manage::$output
+in APPPATH\Controllers\Manage.php on line 15.
+ 1 APPPATH\Controllers\Manage.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Manage::$output', 'APPPATH\\Controllers\\Manage.php', 15)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->login()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 07:54:49 --> Undefined property: CodeIgniter\Autoloader\Autoloader::$output
+in APPPATH\Controllers\Manage.php on line 7.
+ 1 APPPATH\Controllers\Manage.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\Autoloader\\Autoloader::$output', 'APPPATH\\Controllers\\Manage.php', 7)
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(282): include_once('APPPATH\\Controllers\\Manage.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Manage.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Manage')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Manage')
+ 6 SYSTEMPATH\CodeIgniter.php(854): class_exists('\\App\\Controllers\\Manage', true)
+ 7 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 08:12:32 --> CodeIgniter\Database\BaseResult::getFirstRow(): Argument #1 ($type) must be of type string, null given, called in C:\xampp\htdocs\ci-practice\system\Model.php on line 249
+in SYSTEMPATH\Database\BaseResult.php on line 375.
+ 1 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseResult->getFirstRow(null)
+ 2 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 3 APPPATH\Controllers\Manage.php(41): CodeIgniter\BaseModel->first()
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->loginAuth()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 08:12:35 --> CodeIgniter\Database\BaseResult::getFirstRow(): Argument #1 ($type) must be of type string, null given, called in C:\xampp\htdocs\ci-practice\system\Model.php on line 249
+in SYSTEMPATH\Database\BaseResult.php on line 375.
+ 1 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseResult->getFirstRow(null)
+ 2 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 3 APPPATH\Controllers\Manage.php(41): CodeIgniter\BaseModel->first()
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->loginAuth()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 08:13:21 --> CodeIgniter\Database\BaseResult::getFirstRow(): Argument #1 ($type) must be of type string, null given, called in C:\xampp\htdocs\ci-practice\system\Model.php on line 249
+in SYSTEMPATH\Database\BaseResult.php on line 375.
+ 1 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseResult->getFirstRow(null)
+ 2 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 3 APPPATH\Controllers\Manage.php(41): CodeIgniter\BaseModel->first()
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->loginAuth()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 08:15:22 --> CodeIgniter\Database\BaseResult::getFirstRow(): Argument #1 ($type) must be of type string, null given, called in C:\xampp\htdocs\ci-practice\system\Model.php on line 249
+in SYSTEMPATH\Database\BaseResult.php on line 375.
+ 1 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseResult->getFirstRow(null)
+ 2 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 3 APPPATH\Controllers\Manage.php(41): CodeIgniter\BaseModel->first()
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->loginAuth()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 08:15:52 --> CodeIgniter\Database\BaseResult::getFirstRow(): Argument #1 ($type) must be of type string, null given, called in C:\xampp\htdocs\ci-practice\system\Model.php on line 249
+in SYSTEMPATH\Database\BaseResult.php on line 375.
+ 1 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseResult->getFirstRow(null)
+ 2 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 3 APPPATH\Controllers\Manage.php(41): CodeIgniter\BaseModel->first()
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->loginAuth()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 08:16:14 --> CodeIgniter\Database\BaseResult::getFirstRow(): Argument #1 ($type) must be of type string, null given, called in C:\xampp\htdocs\ci-practice\system\Model.php on line 249
+in SYSTEMPATH\Database\BaseResult.php on line 375.
+ 1 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseResult->getFirstRow(null)
+ 2 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 3 APPPATH\Controllers\Manage.php(41): CodeIgniter\BaseModel->first()
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->loginAuth()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 08:16:33 --> CodeIgniter\Database\BaseResult::getFirstRow(): Argument #1 ($type) must be of type string, null given, called in C:\xampp\htdocs\ci-practice\system\Model.php on line 249
+in SYSTEMPATH\Database\BaseResult.php on line 375.
+ 1 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseResult->getFirstRow(null)
+ 2 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 3 APPPATH\Controllers\Manage.php(41): CodeIgniter\BaseModel->first()
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->loginAuth()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-24 11:53:57 --> Array to string conversion
+in APPPATH\Models\UserModel.php on line 13.
+ 1 APPPATH\Models\UserModel.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Models\\UserModel.php', 13)
+ 2 APPPATH\Controllers\Manage.php(16): App\Models\UserModel->getUserDetails()
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->login()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

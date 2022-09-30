@@ -1,0 +1,57 @@
+CRITICAL - 2022-09-10 00:00:06 --> Undefined property: App\Controllers\Manage::$input
+in APPPATH\Controllers\Manage.php on line 9.
+ 1 APPPATH\Controllers\Manage.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Manage::$input', 'APPPATH\\Controllers\\Manage.php', 9)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-10 01:35:46 --> Undefined property: App\Controllers\Manage::$input
+in APPPATH\Controllers\Manage.php on line 9.
+ 1 APPPATH\Controllers\Manage.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Manage::$input', 'APPPATH\\Controllers\\Manage.php', 9)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-10 01:36:10 --> Undefined variable $username
+in APPPATH\Views\manage\index.php on line 23.
+ 1 APPPATH\Views\manage\index.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $username', 'APPPATH\\Views\\manage\\index.php', 23)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\manage\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('manage/index', [], true)
+ 5 APPPATH\Controllers\Manage.php(9): view('manage/index')
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-10 02:02:18 --> Call to undefined function form_open()
+in APPPATH\Views\manage\index.php on line 23.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('manage/index', [], true)
+ 4 APPPATH\Controllers\Manage.php(10): view('manage/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->index()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-10 02:11:15 --> Undefined variable $method
+in APPPATH\Views\manage\index.php on line 23.
+ 1 APPPATH\Views\manage\index.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $method', 'APPPATH\\Views\\manage\\index.php', 23)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\manage\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('manage/index', [], true)
+ 5 APPPATH\Controllers\Manage.php(12): view('manage/index')
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-10 02:29:48 --> Undefined variable $method
+in APPPATH\Views\manage\index.php on line 23.
+ 1 APPPATH\Views\manage\index.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $method', 'APPPATH\\Views\\manage\\index.php', 23)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\manage\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('manage/index', [], true)
+ 5 APPPATH\Controllers\Manage.php(15): view('manage/index')
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,56 @@
+CRITICAL - 2022-09-09 12:27:23 --> Undefined variable $appDirectory
+in APPPATH\Views\manage\index.php on line 37.
+ 1 APPPATH\Views\manage\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $appDirectory', 'APPPATH\\Views\\manage\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\manage\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('manage/index', [], true)
+ 5 APPPATH\Controllers\Manage.php(9): view('manage/index')
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 12:38:42 --> Undefined variable $site_url
+in APPPATH\Views\manage\index.php on line 37.
+ 1 APPPATH\Views\manage\index.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $site_url', 'APPPATH\\Views\\manage\\index.php', 37)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\manage\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('manage/index', [], true)
+ 5 APPPATH\Controllers\Manage.php(12): view('manage/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 13:13:45 --> Undefined array key "username"
+in APPPATH\Controllers\Manage.php on line 9.
+ 1 APPPATH\Controllers\Manage.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "username"', 'APPPATH\\Controllers\\Manage.php', 9)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Manage->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Manage))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 13:24:12 --> Invalid file: edit_user.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('edit_user.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('edit_user', [], true)
+ 3 APPPATH\Controllers\UserCrud.php(37): view('edit_user', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\UserCrud->singleUser('1')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserCrud))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 13:24:35 --> Invalid file: edit_user.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('edit_user.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('edit_user', [], true)
+ 3 APPPATH\Controllers\UserCrud.php(37): view('edit_user', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\UserCrud->singleUser('1')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserCrud))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 13:24:58 --> Invalid file: edit_user.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('edit_user.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('edit_user', [], true)
+ 3 APPPATH\Controllers\UserCrud.php(37): view('edit_user', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\UserCrud->singleUser('4')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserCrud))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

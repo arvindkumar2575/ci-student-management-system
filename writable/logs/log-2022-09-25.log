@@ -1,0 +1,10 @@
+CRITICAL - 2022-09-25 01:09:48 --> Allowed fields must be specified for model: App\Models\UserModel
+in SYSTEMPATH\BaseModel.php on line 1139.
+ 1 SYSTEMPATH\BaseModel.php(1139): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\UserModel')
+ 2 SYSTEMPATH\BaseModel.php(713): CodeIgniter\BaseModel->doProtectFields([...])
+ 3 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 4 APPPATH\Controllers\UserCrud.php(30): CodeIgniter\Model->insert([...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\UserCrud->store()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserCrud))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
