@@ -32,10 +32,10 @@ class Database extends Config
      */
     public $default = [
         'DSN'      => '',
-        'hostname' => '/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock',
+        'hostname' => '127.0.0.1',
         'username' => 'arvind',
-        'password' => 'arvind',
-        'database' => 'demo',
+        'password' => 'Devil@12345',
+        'database' => 'tbl_sms_data',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
@@ -47,7 +47,7 @@ class Database extends Config
         'compress' => false,
         'strictOn' => false,
         'failover' => [],
-        'port'     => 90,
+        'port'     => 3306,
     ];
 
     /**

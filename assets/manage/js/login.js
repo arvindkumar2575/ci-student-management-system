@@ -1,32 +1,3 @@
-let validation = {};
-validation.email = (email)=>{
-    var emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    if(email==null && email==undefined){
-        return false;
-    }else if(email.match(emailRegex)){
-        return true;
-    }else{
-        return false;
-    }
-}
-validation.password = (password)=>{
-    if(password==null && password==undefined){
-        return false;
-    }else if(password.length>8 && password.length<20){
-        return true;
-    }else{
-        return false;
-    }
-},
-validation.text = (text,len=null)=>{
-    if(text==null && text==undefined){
-        return false;
-    }else if(text!="" && text.length>=len){
-        return true;
-    }else{
-        return false;
-    }
-}
 
 // console.log("arvind")
 let currentURL = window.location.href
@@ -38,6 +9,7 @@ $("#form-login").submit(function(e){
     data.username = $(this).find("input[name=email]").val();
     data.password = $(this).find("input[name=password]").val();
     data.form_type = $(this).find("input[name=form-type]").val();
+    data.remember = $(this).find("input[name=remember]").is(':checked');
     let emailValidator = validation.email(data.username);
     let passwordValidator = validation.password(data.password);
     if(emailValidator && passwordValidator){
@@ -68,8 +40,7 @@ $("#form-signup").submit(function(e){
     if(firstNameValidator && lastNameValidator && emailValidator && passwordValidator){
         common.ajaxCall(url,"POST",data,(res)=>{
             if(res.status){
-                alert("signup")
-                //window.location.href=currentURL+"/user/dashboard"
+                window.location.href=manageURL
             }
         },(err)=>{
             console.log(err)

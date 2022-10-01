@@ -6,6 +6,7 @@ use App\Models\Common;
 use App\Models\UserModel;
 use App\Helpers;
 use CodeIgniter\Model;
+use DateTime;
 use Tests\Support\Entity\User;
 
 class ManageAPI extends BaseController
@@ -26,7 +27,7 @@ class ManageAPI extends BaseController
             $email = $this->request->getVar('username');
             $password = $this->request->getVar('password');
             
-            $data = $this->common->get_single_row("users","email",$email);
+            $data = $this->common->get_single_row("tbl_users","email",$email);
             // echo "<pre>";print_r($data);die();
             if($data){
                 $pass = $data['password'];
@@ -58,14 +59,8 @@ class ManageAPI extends BaseController
             $email = $this->request->getVar('email');
             $password = $this->request->getVar('password');
             $hashPass = password_hash($password,PASSWORD_BCRYPT);
-
-            $data = array(
-                'first_name'=>$first_name,
-                'last_name'=>$last_name,
-                'email'=>$email,
-                'password'=>$hashPass
-            );
-            $res = $this->common->data_insert('users',$data);
+            // echo var_dump($email,$hashPass,$first_name,$last_name);die();
+            $res = $this->signUpData($email,$hashPass,$first_name,$last_name);
             if($res){
                 $result = array('status'=>true,'message'=>'Successfully Register!','id'=>$res);
                 return json_encode($result);
@@ -78,5 +73,37 @@ class ManageAPI extends BaseController
             return json_encode($result);
         }
         
+    }
+
+    public function signUpData($email,$password,$first_name,$last_name)
+    {
+        $currentDate = new DateTime();
+        $user_data=array(
+            'email'=>$email,
+            'password'=>$password,
+            'verified'=>'0',
+            'verification_code'=>base64_encode($email),
+            'created_at'=>$currentDate->format('Y-m-d H:i:s'),
+            'modified_at'=>$currentDate->format('Y-m-d H:i:s'),
+            'login_at'=>'',
+        );
+        $user_id = $this->common->data_insert('tbl_user',$user_data);
+        if($user_id){
+            $user_detail_data=array(
+                'user_id'=>$user_id,
+                'first_name'=>$first_name,
+                'last_name'=>$last_name,
+                'class'=>'',
+                'section'=>''
+            );
+            $id = $this->common->data_insert('tbl_student',$user_detail_data);
+            if($id){
+                return $user_id;
+            }else{
+                return $id;
+            }
+        }else{
+            return false;
+        }
     }
 }

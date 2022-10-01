@@ -11,7 +11,7 @@
     <input type="text" name="email" id="inputEmail" class="form-control" placeholder="Email address" autofocus>
     <label for="inputPassword" class="sr-only">Password</label>
     <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password">
-    <div class="checkbox mb-3">
+    <div class="checkbox text-left">
       <label>
         <input type="checkbox" id="inputRemember" name="remember"> Remember me
       </label>
