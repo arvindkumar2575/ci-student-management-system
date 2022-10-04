@@ -10,8 +10,16 @@ class UserModel extends Model
 
     public function getUserDetails()
     {
-        $query = $this->db->query('SELECT * from users');
+        $query = $this->db->query('SELECT * FROM tbl_user');
         $result = $query->getResultArray();
+        return $result;
+    }
+
+    public function isEmailExit($email)
+    {
+        $query = $this->db->query("SELECT * FROM tbl_user WHERE email='$email'");
+        $result = $query->getNumRows();
+        // echo $this->db->lastQuery;die();
         return $result;
     }
 }

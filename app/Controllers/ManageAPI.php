@@ -4,10 +4,7 @@ namespace App\Controllers;
 
 use App\Models\Common;
 use App\Models\UserModel;
-use App\Helpers;
-use CodeIgniter\Model;
 use DateTime;
-use Tests\Support\Entity\User;
 
 class ManageAPI extends BaseController
 {
@@ -26,25 +23,22 @@ class ManageAPI extends BaseController
         if($form_type=="login"){
             $email = $this->request->getVar('username');
             $password = $this->request->getVar('password');
-            
-            $data = $this->common->get_single_row("tbl_users","email",$email);
+
+            $data = $this->common->get_single_row("tbl_user","email",$email);
             // echo "<pre>";print_r($data);die();
             if($data){
                 $pass = $data['password'];
                 $authenticatePass = password_verify($password,$pass);
                 if($authenticatePass){
-                    // $session_data = [
-                    //     'id'=>$data['id'],
-                    //     'first_name'=>$data['first_name'],
-                    //     'last_name'=>$data['last_name'],
-                    //     'email'=>$data['email'],
-                    //     'isLoggedIn'=>true
-                    // ];
-                    // $this->session->set('userdata',$session_data);
+                    $session_data = [
+                        'id'=>$data['id'],
+                        'isLoggedIn'=>true
+                    ];
+                    $this->session->set('userdata',$session_data);
                     $result = array('status'=>true,'message'=>'Successfully Logged In!');
                     return json_encode($result);
                 }else{
-                    $result = array('status'=>false,'message'=>'Password is not matched with this username!');
+                    $result = array('status'=>false,'message'=>'Username/Password is not matched!');
                     return json_encode($result);
                 }
                 // echo '<pre>';print_r($session);die();
@@ -60,12 +54,20 @@ class ManageAPI extends BaseController
             $password = $this->request->getVar('password');
             $hashPass = password_hash($password,PASSWORD_BCRYPT);
             // echo var_dump($email,$hashPass,$first_name,$last_name);die();
-            $res = $this->signUpData($email,$hashPass,$first_name,$last_name);
-            if($res){
-                $result = array('status'=>true,'message'=>'Successfully Register!','id'=>$res);
-                return json_encode($result);
+
+            $isEmailExit = $this->userModel->isEmailExit($email);
+            // echo $isEmailExit;die();
+            if(!$isEmailExit){
+                $res = $this->signUpData($email,$hashPass,$first_name,$last_name);
+                if($res){
+                    $result = array('status'=>true,'message'=>'Successfully Register!','id'=>$res);
+                    return json_encode($result);
+                }else{
+                    $result = array('status'=>false,'message'=>'Please try again!');
+                    return json_encode($result);
+                }
             }else{
-                $result = array('status'=>false,'message'=>'Please try again!');
+                $result = array('status'=>false,'message'=>'Email Id already registered!');
                 return json_encode($result);
             }
         }else{
@@ -75,7 +77,7 @@ class ManageAPI extends BaseController
         
     }
 
-    public function signUpData($email,$password,$first_name,$last_name)
+    private function signUpData($email,$password,$first_name,$last_name)
     {
         $currentDate = new DateTime();
         $user_data=array(

@@ -1,4 +1,4 @@
-<?= view('manage/layouts/login/header') ?>
+<?= view('manage/layouts/login/head') ?>
 <div class="form-div text-center">
   <form class="form-signin" id="form-forget-password" method="POST" action="<?= current_url() ?>">
     <img class="mb-4" src="<?= base_url() ?>/assets/manage/images/brand/bootstrap-solid.svg" alt="" width="72" height="72">
@@ -23,4 +23,4 @@
   </form>
 </div>
 
-  <?= view('manage/layouts/login/header') ?>
+<?= view('manage/layouts/login/footer') ?>

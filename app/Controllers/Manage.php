@@ -17,30 +17,54 @@ class Manage extends BaseController
     }
     public function login()
     {
-        $data = array();
-        $data['title'] = 'Log In';
-        $data["form_type"] = "login";
-        return view('manage/login',$data);
+        if(checkSession()){
+            return redirect()->to('manage/user/dashboard');
+        }else{
+            $data = array();
+            $data['title'] = 'Log In';
+            $data["form_type"] = "login";
+            return view('manage/login',$data);
+        }
     }
 
-    public function signup()
+    public function sign_up()
     {
-        $data = array();
-        $data['title'] = 'Sign Up';
-        $data["form_type"] = "signup";
-        return view('manage/signup',$data);
+        if(checkSession()){
+            return redirect()->to('manage/user/dashboard');
+        }else{
+            $data = array();
+            $data['title'] = 'Sign Up';
+            $data["form_type"] = "signup";
+            return view('manage/signup',$data);
+        }
     }
 
     public function forget_password()
     {
-        $data = array();
-        $data['title'] = 'Forget Password';
-        $data["form_type"] = "forget-password";
-        return view('manage/forget-password',$data);
+        if(checkSession()){
+            return redirect()->to('manage/user/dashboard');
+        }else{
+            $data = array();
+            $data['title'] = 'Forget Password';
+            $data["form_type"] = "forget-password";
+            return view('manage/forget-password',$data);
+        }
+    }
+
+    public function logout()
+    {
+        if(checkSession()){
+            $this->session->destroy();
+        }
+        return redirect()->to('manage');
     }
 
     public function dashboard()
     {
-        return view('manage/dashboard/index');
+        if(checkSession()){
+            return view('manage/dashboard/index');
+        }else{
+            return redirect()->to('manage');
+        }
     }
 }

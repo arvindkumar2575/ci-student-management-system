@@ -1,4 +1,4 @@
-<?= view('manage/layouts/login/header') ?>
+<?= view('manage/layouts/login/head') ?>
 
 
 <div class="form-div text-center">
@@ -25,5 +25,6 @@
     <p class="mt-5 mb-3 text-muted">&copy; 2021-2022</p>
   </form>
 </div>
+
 
 <?= view('manage/layouts/login/footer') ?>

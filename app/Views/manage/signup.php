@@ -1,4 +1,4 @@
-<?= view('manage/layouts/login/header') ?>
+<?= view('manage/layouts/login/head') ?>
 
 <div class="form-div text-center">
   <form class="form-signin" id="form-signup" method="POST" action="<?= current_url() ?>">

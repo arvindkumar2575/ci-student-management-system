@@ -1,23 +1,5 @@
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="<?= base_url() ?>/assets/manage/images/favicons/favicon.ico">
-
-    <title>Dashboard Template for Bootstrap</title>
-
-    <link rel="canonical" href="">
-
-    <!-- Bootstrap core CSS -->
-    <link href="<?= base_url() ?>/assets/manage/css/styles/bootstrap-4.0.0.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="<?= base_url() ?>/assets/manage/css/dashboard.css" rel="stylesheet">
-  </head>
+<?= view('manage/layouts/dashboard/head') ?>
 
   <body>
     <?php 
@@ -271,21 +253,4 @@
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="<?= base_url() ?>/assets/manage/js/scripts/jquery.min.js"></script>
-    <script src="<?= base_url() ?>/assets/manage/js/scripts/popper.min.js"></script>
-    <script src="<?= base_url() ?>/assets/manage/js/scripts/bootstrap.bundle.min.js"></script>
-
-    <!-- Icons -->
-    <script src="<?= base_url() ?>/assets/manage/js/scripts/feather.min.js"></script>
-    <script>
-      feather.replace()
-    </script>
-
-    <!-- Graphs -->
-    <script src="<?= base_url() ?>/assets/manage/js/scripts/Chart.min.js"></script>
-    <script src="<?= base_url() ?>/assets/manage/js/app.js"></script>
-  </body>
-</html>
+<?= view('manage/layouts/login/footer') ?>

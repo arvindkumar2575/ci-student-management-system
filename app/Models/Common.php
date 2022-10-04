@@ -35,8 +35,9 @@ class Common extends Model
         $result=null;
         if(isset($table)){
             $query = $this->db->table($table)->where($key,$value)->get();
+            // echo $this->db->lastQuery;die();
             $result = $query->getRowArray();
-            // echo $this->db->lastQuery;
+            // echo var_dump($result);die();
         }
         return $result;
     }

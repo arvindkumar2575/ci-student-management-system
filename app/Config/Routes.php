@@ -51,11 +51,12 @@ $routes->get('delete/(:num)', 'UserCrud::delete/$1');
 $routes->group('manage', static function ($routes) {
     // login form 
     $routes->get('', 'Manage::login');
-    $routes->get('signup', 'Manage::signup');
+    $routes->get('signup', 'Manage::sign_up');
     $routes->get('forget-password', 'Manage::forget_password');
-    $routes->group('user', static function ($routes) {
+    $routes->get('logout', 'Manage::logout');
+    $routes->group('user', static function ($userRoutes) {
         // user dashboard 
-        $routes->get('dashboard', 'Manage::dashboard');
+        $userRoutes->get('dashboard', 'Manage::dashboard');
     });
 
     $routes->group('api', static function ($apiRoute) {
