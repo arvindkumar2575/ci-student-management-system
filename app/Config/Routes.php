@@ -54,9 +54,11 @@ $routes->group('manage', static function ($routes) {
     $routes->get('signup', 'Manage::sign_up');
     $routes->get('forget-password', 'Manage::forget_password');
     $routes->get('logout', 'Manage::logout');
-    $routes->group('user', static function ($userRoutes) {
+    $routes->group('(:num)', /*['filter'=>'route-filter'],*/ static function ($userRoutes) {
         // user dashboard 
+        $userRoutes->get('', 'Manage::dashboard');
         $userRoutes->get('dashboard', 'Manage::dashboard');
+        $userRoutes->get('users', 'Manage::users');
     });
 
     $routes->group('api', static function ($apiRoute) {

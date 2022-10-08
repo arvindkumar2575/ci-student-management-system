@@ -47,3 +47,13 @@ validation.text = (text,len=null)=>{
         return false;
     }
 }
+validation.isNumber = (n)=>{
+    let number = parseInt(n)
+    if(number==NaN){
+        return false;
+    }else if(number>0){
+        return true;
+    }else{
+        return false;
+    }
+}

@@ -60,9 +60,16 @@ body {
   border-bottom-left-radius: 0;
 }
 .form-signin input[name="password"] {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.form-signin select[name="user_type"],.form-signin select[name="gender_id"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  height: auto !important;
 }
 
 .form-signin .other-pages{
@@ -71,11 +78,27 @@ body {
   margin-top: 10px;
 }
 
+.form-signin button[type="submit"] {
+  margin-top: 20px;
+}
+
 
 .form-div{
   min-width: 330px;
 }
 
+.web-head{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.web-head p.web-heading{
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 25px;
+  margin-left: 10px;
+}
 
 
 

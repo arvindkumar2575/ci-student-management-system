@@ -8,7 +8,9 @@ use DateTime;
 
 class ManageAPI extends BaseController
 {
-    
+    protected $session;
+    protected $common;
+    protected $userModel;
     public function __construct()
     {
         $this->session = session();
@@ -18,14 +20,13 @@ class ManageAPI extends BaseController
 
     public function loginAuth()
     {
-        // echo "<pre>";print_r($_POST);die();
+        // echo "<pre>";print_r($this->request);die();
         $form_type = $this->request->getVar('form_type');
         if($form_type=="login"){
             $email = $this->request->getVar('username');
             $password = $this->request->getVar('password');
 
             $data = $this->common->get_single_row("tbl_user","email",$email);
-            // echo "<pre>";print_r($data);die();
             if($data){
                 $pass = $data['password'];
                 $authenticatePass = password_verify($password,$pass);
@@ -35,32 +36,38 @@ class ManageAPI extends BaseController
                         'isLoggedIn'=>true
                     ];
                     $this->session->set('userdata',$session_data);
-                    $result = array('status'=>true,'message'=>'Successfully Logged In!');
+                    $result = array('status'=>true,'message'=>'Successfully Logged In!','id'=>$data['id']);
                     return json_encode($result);
                 }else{
                     $result = array('status'=>false,'message'=>'Username/Password is not matched!');
                     return json_encode($result);
                 }
-                // echo '<pre>';print_r($session);die();
             }else{
                 $result = array('status'=>false,'message'=>'Username/Password not exit!');
                 return json_encode($result);
             }
         }else if($form_type=="signup"){
-            // echo $form_type;die();
             $first_name = $this->request->getVar('first_name');
             $last_name = $this->request->getVar('last_name');
+            $gender_id = $this->request->getVar('gender_id');
             $email = $this->request->getVar('email');
             $password = $this->request->getVar('password');
+            $user_type = $this->request->getVar('user_type');
+            $details = $this->request->getVar('details');
             $hashPass = password_hash($password,PASSWORD_BCRYPT);
-            // echo var_dump($email,$hashPass,$first_name,$last_name);die();
-
-            $isEmailExit = $this->userModel->isEmailExit($email);
+            
+            $isEmailExit=0;
+            if(!empty($user_type)){
+                $isEmailExit = $this->userModel->isEmailExit($email);
+            }else{
+                $result = array('status'=>false,'message'=>'Select User Type!');
+                return json_encode($result);
+            }
             // echo $isEmailExit;die();
             if(!$isEmailExit){
-                $res = $this->signUpData($email,$hashPass,$first_name,$last_name);
-                if($res){
-                    $result = array('status'=>true,'message'=>'Successfully Register!','id'=>$res);
+                $user_id = $this->signUpData($email,$hashPass,$user_type,$first_name,$last_name,$gender_id,$details);
+                if($user_id){
+                    $result = array('status'=>true,'message'=>'Successfully Register!','id'=>$user_id);
                     return json_encode($result);
                 }else{
                     $result = array('status'=>false,'message'=>'Please try again!');
@@ -77,35 +84,38 @@ class ManageAPI extends BaseController
         
     }
 
-    private function signUpData($email,$password,$first_name,$last_name)
+    private function signUpData($email,$password,$user_type,$first_name,$last_name,$gender_id,$details)
     {
         $currentDate = new DateTime();
         $user_data=array(
+            'user_type'=>$user_type,
             'email'=>$email,
             'password'=>$password,
             'verified'=>'0',
-            'verification_code'=>base64_encode($email),
+            'first_name'=>$first_name,
+            'last_name'=>$last_name,
+            'gender_id'=>$gender_id,
+            'details'=>json_encode($details),
+            'verification_code'=>md5($email),
             'created_at'=>$currentDate->format('Y-m-d H:i:s'),
             'modified_at'=>$currentDate->format('Y-m-d H:i:s'),
-            'login_at'=>'',
         );
         $user_id = $this->common->data_insert('tbl_user',$user_data);
         if($user_id){
-            $user_detail_data=array(
-                'user_id'=>$user_id,
-                'first_name'=>$first_name,
-                'last_name'=>$last_name,
-                'class'=>'',
-                'section'=>''
-            );
-            $id = $this->common->data_insert('tbl_student',$user_detail_data);
-            if($id){
-                return $user_id;
-            }else{
-                return $id;
-            }
+            return $user_id;
         }else{
             return false;
         }
+    }
+
+    private function saveStudentData($user_type, $data)
+    {
+        $id=false;
+        if($user_type=='1'){
+            $id = $this->common->data_insert('tbl_student_details',$data);
+        }else {
+            $id = $this->common->data_insert('tbl_user_details',$data);
+        }
+        return $id;
     }
 }

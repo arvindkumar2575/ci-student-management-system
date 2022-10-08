@@ -7,8 +7,6 @@ class Home extends BaseController
 {
     public function index()
     {
-        // return view('welcome_message');
-
         $data["bs_url"] = base_url('/assets/css/style.css');
         $paths = new Paths();
         $data['app_url'] = $paths->appDirectory;

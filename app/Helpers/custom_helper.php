@@ -1,9 +1,13 @@
 <?php
 
 if (!function_exists("manageURL")) {
-    function manageURL()
+    function manageURL($uri=null)
     {
-        return base_url("manage");
+        if(isset($uri)){
+            return base_url("manage").'/'.$uri;
+        }else{
+            return base_url("manage");
+        }
     }
 }
 
@@ -24,6 +28,20 @@ if (!function_exists("checkSession")) {
             return true;
         }else{
             return false;
+        }
+    }
+}
+
+if (!function_exists("checkSessionUserId")) {
+    function checkSessionUserId()
+    {
+        $session = session();
+        $userdata = $session->get('userdata');
+        $userId = isset($userdata)?$userdata['id']:0;
+        if($userId){
+            return $userId;
+        }else{
+            return 0;
         }
     }
 }
