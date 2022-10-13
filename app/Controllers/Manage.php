@@ -104,6 +104,11 @@ class Manage extends BaseController
             $data['uri2'] =  $this->uri_segment->getSegment(2);
             $data['uri3'] =  $this->uri_segment->getSegment(3);
             $data['permissions'] = $this->userModel->getUserPermissions($url_userId);
+            $data['gender_details'] = $this->userModel->getGenderDetails();
+            $data['user_types'] = $this->userModel->getUserTypes();
+            $data['class_details'] = $this->userModel->getClassDetails();
+            $data['section_details'] = $this->userModel->getSectionDetails();
+            // echo '<pre>';print_r($data);die;
             return view('manage/v1/dashboard/index',$data);
         }else{
             return redirect()->to('manage');

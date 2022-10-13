@@ -19,7 +19,7 @@ class CustomEmail{
 
         $email->setSubject('Email Test');
         $email->setMessage('Testing the email class.');
-
+        // echo '<pre>';print_r($email);
         if($email->send()){
             return 'success';
         }else{

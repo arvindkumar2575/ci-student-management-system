@@ -11,6 +11,11 @@
                         <span data-feather="home"></span>
                         <?= $value['display_name'] ?> <span class="sr-only">(current)</span>
                     </a>
+                    <ul>
+                        <li>Test 1</li>
+                        <li>Test 2</li>
+                        <li>Test 3</li>
+                    </ul>
                 </li>
             <?php } ?>
         </ul>

@@ -16,7 +16,22 @@ common.ajaxCall = (url,type,data,onSucces,onError,onComplete)=>{
 
 
 
-
+// validation.email = (email)=>{
+//     let error = "";
+//     let value = email.val()
+//     var emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+//     if(value==null || value==undefined || value==''){
+//         error="<span class='error'>Email Id is mandatory!</span>"
+//         email.after(error)
+//         return false;
+//     }else if(value.match(emailRegex)){
+//         return true;
+//     }else{
+//         error="<span class='error'>Email Id pattern is not match!</span>"
+//         email.after(error)
+//         return false;
+//     }
+// }
 
 
 validation.email = (email)=>{

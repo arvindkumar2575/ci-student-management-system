@@ -33,9 +33,25 @@ class UserModel extends Model
         return $result;
     }
 
+    public function getClassDetails()
+    {
+        $sql = 'SELECT id,display_name FROM tbl_class ORDER BY priority ASC';
+        $query = $this->db->query($sql);
+        $result = $query->getResultArray();
+        return $result;
+    }
+
+    public function getSectionDetails()
+    {
+        $sql = 'SELECT id,display_name FROM tbl_section ORDER BY priority ASC';
+        $query = $this->db->query($sql);
+        $result = $query->getResultArray();
+        return $result;
+    }
+
     public function getUserTypes()
     {
-        $sql = 'SELECT id,name,display_name FROM tbl_user_type';
+        $sql = 'SELECT id,name,display_name FROM tbl_user_type ORDER BY priority ASC';
         $query = $this->db->query($sql);
         $result = $query->getResultArray();
         return $result;
@@ -51,6 +67,8 @@ class UserModel extends Model
         $result = $query->getResultArray();
         return $result;
     }
+
+
 
     
 }
